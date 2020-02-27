@@ -63,6 +63,9 @@ void spc_update_secret(uint32_t serverId, char *userEpub, uint32_t userEpubLen, 
 		return;
 	}
 
+	//BUG FIX:
+	//clean counter to 1 after update OTP secret
+
 	ret = server_setServerInfo(&info);
 	if(ret != 0)
 	{
