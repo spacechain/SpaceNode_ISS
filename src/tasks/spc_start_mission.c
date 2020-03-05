@@ -293,7 +293,7 @@ int start_sign_tx_file(const char *txFilePath, const char *resFilePath)
 
 	}
 
-#if 0
+#if 1
 	ret = server_setServerInfo(&info);
 	if(ret != 0)
 	{

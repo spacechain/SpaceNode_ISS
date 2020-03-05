@@ -65,6 +65,7 @@ void spc_update_secret(uint32_t serverId, char *userEpub, uint32_t userEpubLen, 
 
 	//BUG FIX:
 	//clean counter to 1 after update OTP secret
+	info.server_counter = 1;	
 
 	ret = server_setServerInfo(&info);
 	if(ret != 0)

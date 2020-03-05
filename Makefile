@@ -1,12 +1,10 @@
 #!/bin/bash
 
 DIR_INC = ./include
-DIR_GCRYPT_INC = /home/twhite/mylibs/install/libgcrypt-1.7.8/include
-DIR_GCRYPT_LIB = /home/twhite/mylibs/install/libgcrypt-1.7.8/lib
-DIR_GPGERROR_INC = /home/twhite/mylibs/install/libgpg-error-1.37/include
-DIR_GPGERROR_LIB = /home/twhite/mylibs/install/libgpg-error-1.37/lib
-DIR_OPENSSL_INC = /home/twhite/mylibs/install/openssl/include
-DIR_OPENSSL_LIB = /home/twhite/mylibs/install/openssl/lib
+DIR_LIB_INC = /home/twhite/mylibs/adrvLibs/include
+DIR_LIB_LINK = /home/twhite/mylibs/adrvLibs/lib
+#DIR_OPENSSL_INC = /home/twhite/mylibs/install/openssl/include
+#DIR_OPENSSL_LIB = /home/twhite/mylibs/install/openssl/lib
 DIR_SRC = ./src
 DIR_OBJ = ./obj
 DIR_BIN = ./bin
@@ -20,8 +18,9 @@ TARGET = spacenode
 
 BIN_TARGET = ${DIR_BIN}/${TARGET}
 
+CROSS_COMPILE=arm-none-linux-gnueabihf-
 CC=${CROSS_COMPILE}gcc
-CFLAGS=-O3 -g3 -Wall -std=gnu99 -I${DIR_INC} -I${DIR_GPGERROR_INC} -L${DIR_GPGERROR_LIB} -I${DIR_GCRYPT_INC} -L${DIR_GCRYPT_LIB} -I${DIR_OPENSSL_INC} -L${DIR_OPENSSL_LIB} 
+CFLAGS=-O3 -g3 -Wall -std=gnu99 -I${DIR_INC} -I${DIR_LIB_INC} -L${DIR_LIB_LINK}
 LFLAGS= -lm -lgpg-error -lgcrypt -lssl -lcrypto 
 
 ${BIN_TARGET}:${OBJ_MODS} ${OBJ_TASKS}
