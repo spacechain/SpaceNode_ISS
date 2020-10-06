@@ -1,14 +1,14 @@
-# 国际空间站任务SpaceNode软件
+# ISS Space Node software
 Version 1.0
 
-## 背景
+## Background
 
-该工程为SpaceChain在国际空间站节点任务中运行的载荷软件，用于批量处理SpaceChain多重签名安全支付交易。
+Our Space Node software is used to perform multisignature transactions through the International Space Station. 
 
-## 硬件介绍
+## Hardware introduction
 
-硬件采用GomSpace NanoMind Z7000:
-* Xilinx XC7Z030 平台
+Our hardware is based on GomSpace NanoMind Z7000: 
+* Xilinx XC7Z030 
 * dual-core ARM Cortex-A9
 * Kintex-7 FPGA
 * 1 GB DDR3 memory
@@ -16,18 +16,18 @@ Version 1.0
 * 4 GB eMMC flash 
 * I2C、CAN、Ethernet
 
-## 软件介绍
+## Software introduction
 
-SpaceNode软件运行在SpaceChain ISS节点上，主要功能:
-* 地面站认证交换
-* 在轨秘钥生成与下发
-* 批量SpaceChain多签交易处理
-* 卫星公钥更新下发
-* 企业用户秘钥更新下发
+Space Node software is operated on the International Space Station. The main functions include: 
+* Ground station verification
+* On-orbit key generation 
+* Transactions authentication 
+* Satellite public key update 
+* Client private key update
 
-## 编译
+## Compile
 
-* 执行make命令
-* 在bin目录下生成spacenode可执行文件
+* Executing make command
+* Generating executable file under bin of Space Node
 
 
